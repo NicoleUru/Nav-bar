@@ -1,0 +1,186 @@
+/**{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav{
+    background: #8686BF;
+    height: 88px;
+    width: 100%;
+}
+
+span{
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 10px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    text-align: center;
+
+}
+
+li a{
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+a.active, a:hover{
+    background: #E6E6FA ;
+    transition: 0.5s;
+
+}*/
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: sans-serif;
+
+}
+
+nav{
+    background: #222;
+    padding:  5px 20px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.menu li{
+    font-size: 16px;
+    padding: 15px 5px;
+}
+
+.menu li a{
+    display: block;
+}
+
+.logo a{
+    font-size: 20px;
+}
+
+/* Mobile Menu*/ /*propieties of FLEXBOX*/
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item{
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.item.active{
+    display: block;
+}
+
+
+
+
+.toggle{
+   cursor: pointer;
+}
+
+.bars{
+    background: #999;
+    display: inline-block;
+    height: 2px;
+    position: relative;/*buscar*/
+    width:  18px;
+}
+
+.bars::before, .bars::after{
+    background: #999;
+    content: "";/*buscar*/
+    display: inline-block;
+    height: 2px;
+    position: absolute;/*buscar*/
+    width:  18px;
+}
+
+.bars::before{
+    top: 5px;
+}
+.bars::after{
+    top:-5px;
+}
+
+/*Tablet Menu*/
+@media all and (min-width: 468px){
+
+.logo{
+    flex: 1;
+    display: inline-block;
+}
+
+
+.menu{
+    justify-content: center;
+}
+
+
+}
+@media all and (min-width :1000px){
+
+    .item{
+        display: block;
+        width: auto; /*buscar*/
+    }
+
+    .toggle{
+        display: none;
+    }
+
+    .logo{
+        order: 0;
+    }
+
+    .item{
+        order:1;
+    }
+
+    .menu li{
+        padding: 15px 10px;
+    }
+
+
+}
+
+
+
